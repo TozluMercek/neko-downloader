@@ -1,0 +1,9 @@
+# Keep rules for youtube-dl and ffmpeg JNI
+-keep class com.yausername.youtubedl_android.** { *; }
+-keep class com.yausername.ffmpeg.** { *; }
+
+# Keep rules for model classes with serialization
+-keepattributes *Annotation*,Signature,InnerClasses,EnclosingMethod
+-keepclassmembers class * {
+    @kotlinx.serialization.Serializable *;
+}
